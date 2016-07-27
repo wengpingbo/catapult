@@ -97,7 +97,8 @@ def main():
   # pylint: disable=unused-variable
   options, unused_args = parser.parse_args(sys.argv[1:])
 
-  update(options.no_auto_update, options.no_min)
+  dirs = os.path.dirname(os.path.realpath(__file__))
+  update(dirs, options.no_auto_update, options.no_min)
 
 
 if __name__ == '__main__':
