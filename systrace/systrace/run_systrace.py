@@ -62,6 +62,9 @@ def parse_options(argv):
   parser.add_option('-k', '--ktrace', dest='kfuncs', action='store',
                     help='specify a comma-separated list of kernel functions '
                     'to trace')
+  parser.add_option('--events', dest='events', action='store',
+                    help='specify a comma-separated list of kernel tracepoints '
+                    'to trace')
   parser.add_option('-l', '--list-categories', dest='list_categories',
                     default=False, action='store_true',
                     help='list the available categories and exit')

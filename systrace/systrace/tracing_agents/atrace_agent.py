@@ -102,6 +102,9 @@ def _construct_extra_atrace_args(options, categories):
   if options.kfuncs is not None:
     extra_args.extend(['-k', options.kfuncs])
 
+  if options.events is not None:
+    extra_args.extend(['-e', options.events])
+
   extra_args.extend(categories)
   return extra_args
 
